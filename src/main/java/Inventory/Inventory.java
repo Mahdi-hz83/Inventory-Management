@@ -19,6 +19,18 @@ public class Inventory {
         orders = new ArrayList<>();
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public List<Supplier> getSuppliers() {
+        return suppliers;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
     public void addProduct(Product product) {
         products.add(product);
     }
@@ -31,7 +43,7 @@ public class Inventory {
         }
     }
 
-    private Product getProductById(String id) {
+    protected Product getProductById(String id) {
         for (Product product : products) {
             if (product.getProductId().equals(id)){
                 return product;
@@ -53,7 +65,7 @@ public class Inventory {
         }
     }
 
-    private Supplier getSupplierById(String id) {
+    protected Supplier getSupplierById(String id) {
         for (Supplier supplier : suppliers) {
             if (id.equals(supplier.getSupplierId())){
                 return supplier;
@@ -66,7 +78,7 @@ public class Inventory {
         orders.add(order);
         order.placeOrder();
         Product product = order.getProduct();
-        product.addStock(order.getQuantity());
+        product.removeStock(order.getQuantity());
     }
 
     public void cancelOrder(String orderId) {
