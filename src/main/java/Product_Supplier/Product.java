@@ -99,6 +99,7 @@ public class Product {
         return Objects.equals(productId , product.productId);
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(productId);
