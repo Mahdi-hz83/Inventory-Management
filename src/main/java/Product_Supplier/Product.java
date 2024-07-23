@@ -105,13 +105,7 @@ public class Product {
     }
 
     public String getProductInfo() {
-        return "Product{" +
-                "productId= " + getProductId() +
-                ", productName=' " + getProductName() + '\'' +
-                ", productDescription=' " + getProductDescription() + '\'' +
-                ", quantity= " + getQuantity() +
-                ", price= " + getPrice() +
-                ", supplierId=' " + getSupplierId() + '\'' +
-                '}';
+        return "Product ID: " + productId + "\nName: " + productName + "\nProduct Description: " + productDescription +
+                "\nQuantity: " + quantity + "\nPrice: " + price + "\nSupplier ID: " + supplierId;
     }
 }
