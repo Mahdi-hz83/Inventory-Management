@@ -85,7 +85,7 @@ public class Product {
 
     public void updatePrice(double price) {
         if (price > 0) {
-            this.price += price;
+            this.price = price;
         } else{
             throw new IllegalArgumentException("Price must be greater than 0");
         }
