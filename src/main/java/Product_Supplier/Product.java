@@ -3,14 +3,14 @@ package Product_Supplier;
 import java.util.Objects;
 
 public class Product {
-    private int productId;
+    private String productId;
     private String productName;
     private String productDescription;
     private int quantity;
     private double price;
     private String supplierId;
 
-    public Product(int productId, String productName, String productDescription, int quantity, double price, String supplierId) {
+    public Product(String productId, String productName, String productDescription, int quantity, double price, String supplierId) {
         this.productId = productId;
         this.productName = productName;
         this.productDescription = productDescription;
@@ -19,11 +19,11 @@ public class Product {
         this.supplierId = supplierId;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
@@ -104,8 +104,7 @@ public class Product {
         return Objects.hash(productId);
     }
 
-    @Override
-    public String toString() {
+    public String getProductInfo() {
         return "Product{" +
                 "productId= " + getProductId() +
                 ", productName=' " + getProductName() + '\'' +
